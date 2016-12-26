@@ -100,6 +100,7 @@
 		D435B1C71E11533D002BDBBC /* RssReader */ = {
 			isa = PBXGroup;
 			children = (
+				D435B1EB1E11791A002BDBBC /* Infrastructure */,
 				D435B1C81E11533D002BDBBC /* AppDelegate.swift */,
 				D435B1CF1E11533D002BDBBC /* Assets.xcassets */,
 				D435B1D41E11533D002BDBBC /* Info.plist */,
@@ -124,7 +125,6 @@
 			children = (
 				D435B1C71E11533D002BDBBC /* RssReader */,
 			);
-			name = Sources;
 			path = Sources;
 			sourceTree = "<group>";
 		};
@@ -133,8 +133,22 @@
 			children = (
 				D435B1DC1E11533D002BDBBC /* RssReaderTests */,
 			);
-			name = Tests;
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		D435B1EB1E11791A002BDBBC /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				D435B1EC1E11794C002BDBBC /* api */,
+			);
+			name = Infrastructure;
+			sourceTree = "<group>";
+		};
+		D435B1EC1E11794C002BDBBC /* api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = api;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
