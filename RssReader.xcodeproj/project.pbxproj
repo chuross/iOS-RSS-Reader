@@ -15,6 +15,8 @@
 		D435B1D01E11533D002BDBBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D435B1CF1E11533D002BDBBC /* Assets.xcassets */; };
 		D435B1D31E11533D002BDBBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D435B1D11E11533D002BDBBC /* LaunchScreen.storyboard */; };
 		D435B1DE1E11533D002BDBBC /* RssReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1DD1E11533D002BDBBC /* RssReaderTests.swift */; };
+		D435B1F11E118ACA002BDBBC /* FeedlyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */; };
+		D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1F41E118D24002BDBBC /* Session+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		D435B1D91E11533D002BDBBC /* RssReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RssReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D435B1DD1E11533D002BDBBC /* RssReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssReaderTests.swift; sourceTree = "<group>"; };
 		D435B1DF1E11533D002BDBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedlyApi.swift; sourceTree = "<group>"; };
+		D435B1F41E118D24002BDBBC /* Session+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+Rx.swift"; sourceTree = "<group>"; };
 		F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,16 +143,26 @@
 		D435B1EB1E11791A002BDBBC /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				D435B1EC1E11794C002BDBBC /* api */,
+				D435B1F61E118D3C002BDBBC /* Extension */,
+				D435B1F31E118C98002BDBBC /* Api */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
 		};
-		D435B1EC1E11794C002BDBBC /* api */ = {
+		D435B1F31E118C98002BDBBC /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */,
 			);
-			name = api;
+			name = Api;
+			sourceTree = "<group>";
+		};
+		D435B1F61E118D3C002BDBBC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D435B1F41E118D24002BDBBC /* Session+Rx.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
@@ -362,7 +376,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */,
 				D435B1CB1E11533D002BDBBC /* ViewController.swift in Sources */,
+				D435B1F11E118ACA002BDBBC /* FeedlyApi.swift in Sources */,
 				D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
