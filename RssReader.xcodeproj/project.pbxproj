@@ -59,9 +59,9 @@
 		D435B1BC1E11533D002BDBBC = {
 			isa = PBXGroup;
 			children = (
-				D435B1C71E11533D002BDBBC /* RssReader */,
-				D435B1DC1E11533D002BDBBC /* RssReaderTests */,
 				D435B1C61E11533D002BDBBC /* Products */,
+				D435B1E81E116110002BDBBC /* Sources */,
+				D435B1E91E116118002BDBBC /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				D435B1C81E11533D002BDBBC /* AppDelegate.swift */,
-				D435B1CA1E11533D002BDBBC /* ViewController.swift */,
-				D435B1CC1E11533D002BDBBC /* Main.storyboard */,
 				D435B1CF1E11533D002BDBBC /* Assets.xcassets */,
-				D435B1D11E11533D002BDBBC /* LaunchScreen.storyboard */,
 				D435B1D41E11533D002BDBBC /* Info.plist */,
+				D435B1D11E11533D002BDBBC /* LaunchScreen.storyboard */,
+				D435B1CC1E11533D002BDBBC /* Main.storyboard */,
+				D435B1CA1E11533D002BDBBC /* ViewController.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -90,10 +90,28 @@
 		D435B1DC1E11533D002BDBBC /* RssReaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				D435B1DD1E11533D002BDBBC /* RssReaderTests.swift */,
 				D435B1DF1E11533D002BDBBC /* Info.plist */,
+				D435B1DD1E11533D002BDBBC /* RssReaderTests.swift */,
 			);
 			path = RssReaderTests;
+			sourceTree = "<group>";
+		};
+		D435B1E81E116110002BDBBC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D435B1C71E11533D002BDBBC /* RssReader */,
+			);
+			name = Sources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D435B1E91E116118002BDBBC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D435B1DC1E11533D002BDBBC /* RssReaderTests */,
+			);
+			name = Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +247,7 @@
 				D435B1CD1E11533D002BDBBC /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		D435B1D11E11533D002BDBBC /* LaunchScreen.storyboard */ = {
@@ -237,6 +256,7 @@
 				D435B1D21E11533D002BDBBC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -339,7 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RssReader/Info.plist;
+				INFOPLIST_FILE = Sources/RssReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.chuross.RssReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,7 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RssReader/Info.plist;
+				INFOPLIST_FILE = Sources/RssReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.chuross.RssReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,7 +384,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RssReaderTests/Info.plist;
+				INFOPLIST_FILE = Tests/RssReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.chuross.RssReaderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,7 +398,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RssReaderTests/Info.plist;
+				INFOPLIST_FILE = Tests/RssReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.chuross.RssReaderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -406,6 +426,7 @@
 				D435B1E41E11533D002BDBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D435B1E51E11533D002BDBBC /* Build configuration list for PBXNativeTarget "RssReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +435,7 @@
 				D435B1E71E11533D002BDBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
