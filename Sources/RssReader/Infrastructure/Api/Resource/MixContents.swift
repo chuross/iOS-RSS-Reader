@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Mix: Mappable {
+class MixContents: Mappable {
 
     var id: String?
     var title: String?

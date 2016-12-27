@@ -12,7 +12,7 @@ import ObjectMapper
 
 struct StreamGetRequest: Request {
 
-    typealias Response = Mix
+    typealias Response = MixContents
 
     var baseURL: URL { return context.baseUrl }
     var method: HTTPMethod { return .get }
