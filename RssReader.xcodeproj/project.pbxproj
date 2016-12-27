@@ -191,6 +191,7 @@
 				D435B2051E128C44002BDBBC /* StreamGetRequest.swift */,
 			);
 			name = Request;
+			path = Request;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
