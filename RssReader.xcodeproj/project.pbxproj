@@ -88,11 +88,11 @@
 		D435B1BC1E11533D002BDBBC = {
 			isa = PBXGroup;
 			children = (
+				FBA487384BF916527B1F271D /* Frameworks */,
+				50629D389B9B8562D63E9F94 /* Pods */,
 				D435B1C61E11533D002BDBBC /* Products */,
 				D435B1E81E116110002BDBBC /* Sources */,
 				D435B1E91E116118002BDBBC /* Tests */,
-				50629D389B9B8562D63E9F94 /* Pods */,
-				FBA487384BF916527B1F271D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,10 +147,11 @@
 		D435B1EB1E11791A002BDBBC /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				D435B1F61E118D3C002BDBBC /* Extension */,
 				D435B1F31E118C98002BDBBC /* Api */,
+				D435B1F61E118D3C002BDBBC /* Extension */,
 			);
 			name = Infrastructure;
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		D435B1F31E118C98002BDBBC /* Api */ = {
@@ -160,6 +161,7 @@
 				D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */,
 			);
 			name = Api;
+			path = Api;
 			sourceTree = "<group>";
 		};
 		D435B1F61E118D3C002BDBBC /* Extension */ = {
@@ -168,15 +170,17 @@
 				D435B1F41E118D24002BDBBC /* Session+Rx.swift */,
 			);
 			name = Extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D435B1F71E11986E002BDBBC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				D435B1FC1E123F8B002BDBBC /* Mix.swift */,
 				D435B1FE1E12403F002BDBBC /* Entry.swift */,
+				D435B1FC1E123F8B002BDBBC /* Mix.swift */,
 			);
 			name = Resource;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
