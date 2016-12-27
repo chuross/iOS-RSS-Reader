@@ -19,6 +19,8 @@
 		D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1F41E118D24002BDBBC /* Session+Rx.swift */; };
 		D435B1FD1E123F8B002BDBBC /* Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1FC1E123F8B002BDBBC /* Mix.swift */; };
 		D435B1FF1E12403F002BDBBC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1FE1E12403F002BDBBC /* Entry.swift */; };
+		D435B2061E128C44002BDBBC /* StreamGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2051E128C44002BDBBC /* StreamGetRequest.swift */; };
+		D435B20A1E128F0C002BDBBC /* RequestContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2091E128F0C002BDBBC /* RequestContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D435B1F41E118D24002BDBBC /* Session+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+Rx.swift"; sourceTree = "<group>"; };
 		D435B1FC1E123F8B002BDBBC /* Mix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mix.swift; sourceTree = "<group>"; };
 		D435B1FE1E12403F002BDBBC /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		D435B2051E128C44002BDBBC /* StreamGetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamGetRequest.swift; sourceTree = "<group>"; };
+		D435B2091E128F0C002BDBBC /* RequestContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestContext.swift; sourceTree = "<group>"; };
 		F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,17 +154,17 @@
 				D435B1F31E118C98002BDBBC /* Api */,
 				D435B1F61E118D3C002BDBBC /* Extension */,
 			);
-			name = Infrastructure;
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		D435B1F31E118C98002BDBBC /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				D435B2021E1284CD002BDBBC /* Request */,
 				D435B1F71E11986E002BDBBC /* Resource */,
 				D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */,
+				D435B2091E128F0C002BDBBC /* RequestContext.swift */,
 			);
-			name = Api;
 			path = Api;
 			sourceTree = "<group>";
 		};
@@ -169,7 +173,6 @@
 			children = (
 				D435B1F41E118D24002BDBBC /* Session+Rx.swift */,
 			);
-			name = Extension;
 			path = Extension;
 			sourceTree = "<group>";
 		};
@@ -179,8 +182,15 @@
 				D435B1FE1E12403F002BDBBC /* Entry.swift */,
 				D435B1FC1E123F8B002BDBBC /* Mix.swift */,
 			);
-			name = Resource;
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		D435B2021E1284CD002BDBBC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D435B2051E128C44002BDBBC /* StreamGetRequest.swift */,
+			);
+			name = Request;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
@@ -398,7 +408,9 @@
 				D435B1FD1E123F8B002BDBBC /* Mix.swift in Sources */,
 				D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */,
 				D435B1CB1E11533D002BDBBC /* ViewController.swift in Sources */,
+				D435B20A1E128F0C002BDBBC /* RequestContext.swift in Sources */,
 				D435B1F11E118ACA002BDBBC /* FeedlyApi.swift in Sources */,
+				D435B2061E128C44002BDBBC /* StreamGetRequest.swift in Sources */,
 				D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

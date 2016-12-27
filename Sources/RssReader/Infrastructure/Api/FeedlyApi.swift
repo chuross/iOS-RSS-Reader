@@ -7,6 +7,21 @@
 //
 
 import Foundation
+import RxSwift
+import APIKit
 
 class FeedlyApi {
+
+    let context: RequestContext
+
+    init(_ context: RequestContext) {
+        self.context = context
+    }
+
+    func getEntries(streamId: String) -> Observable<[Entry]> {
+        return Session.rx_send(StreamGetRequest(context, streamId: streamId))
+            .map({ mixResponse -> [Entry] in
+                return mixResponse.items
+            })
+    }
 }

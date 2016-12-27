@@ -12,7 +12,7 @@ import RxSwift
 
 extension Session {
 
-    public static func rxResponse<T: Request>(request: T) -> Observable<T.Response> {
+    public static func rx_send<T: Request>(_ request: T) -> Observable<T.Response> {
         return Observable.create { observer in
             let task = send(request) { result in
                 switch result {
