@@ -17,6 +17,8 @@
 		D435B1DE1E11533D002BDBBC /* RssReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1DD1E11533D002BDBBC /* RssReaderTests.swift */; };
 		D435B1F11E118ACA002BDBBC /* FeedlyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */; };
 		D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1F41E118D24002BDBBC /* Session+Rx.swift */; };
+		D435B1FD1E123F8B002BDBBC /* Mix.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1FC1E123F8B002BDBBC /* Mix.swift */; };
+		D435B1FF1E12403F002BDBBC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1FE1E12403F002BDBBC /* Entry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		D435B1DF1E11533D002BDBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedlyApi.swift; sourceTree = "<group>"; };
 		D435B1F41E118D24002BDBBC /* Session+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+Rx.swift"; sourceTree = "<group>"; };
+		D435B1FC1E123F8B002BDBBC /* Mix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mix.swift; sourceTree = "<group>"; };
+		D435B1FE1E12403F002BDBBC /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +156,7 @@
 		D435B1F31E118C98002BDBBC /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				D435B1F71E11986E002BDBBC /* Resource */,
 				D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */,
 			);
 			name = Api;
@@ -163,6 +168,15 @@
 				D435B1F41E118D24002BDBBC /* Session+Rx.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		D435B1F71E11986E002BDBBC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D435B1FC1E123F8B002BDBBC /* Mix.swift */,
+				D435B1FE1E12403F002BDBBC /* Entry.swift */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
@@ -376,6 +390,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D435B1FF1E12403F002BDBBC /* Entry.swift in Sources */,
+				D435B1FD1E123F8B002BDBBC /* Mix.swift in Sources */,
 				D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */,
 				D435B1CB1E11533D002BDBBC /* ViewController.swift in Sources */,
 				D435B1F11E118ACA002BDBBC /* FeedlyApi.swift in Sources */,
