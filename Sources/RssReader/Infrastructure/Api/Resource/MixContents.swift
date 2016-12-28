@@ -14,6 +14,7 @@ class MixContents: Mappable {
     var id: String?
     var title: String?
     var items: [Entry]
+    
 
     required init?(map: Map) {
         items = (try? map.value("items")) ?? []

@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let container: Container = Container() { container in
+        container.register(RequestContext.self) {_ in return DefaultRequestContext() }
+            .inObjectScope(.container)
+    }
     var window: UIWindow?
 
 

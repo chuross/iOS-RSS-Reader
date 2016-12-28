@@ -13,6 +13,7 @@ import APIKit
 class FeedlyApi {
 
     let context: RequestContext
+    
 
     init(_ context: RequestContext) {
         self.context = context

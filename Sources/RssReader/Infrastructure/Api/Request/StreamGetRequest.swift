@@ -23,7 +23,8 @@ struct StreamGetRequest: Request {
         ]
     }
     private let context: RequestContext
-    private var streamId: String
+    private let streamId: String
+
 
     init(_ context:RequestContext, streamId: String) {
         self.context = context

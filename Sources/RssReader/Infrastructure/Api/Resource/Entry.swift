@@ -16,7 +16,7 @@ class Entry: Mappable {
     var url: String?
     var thumbnailUrl: URL?
     var publishedAt: Date?
-
+    
 
     required init?(map: Map) {
     }
