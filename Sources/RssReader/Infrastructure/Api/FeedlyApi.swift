@@ -19,7 +19,8 @@ class FeedlyApi {
         self.context = context
     }
 
-    func getMixContents(streamId: String) -> Observable<MixContents> {
+    func getMixEntryContents(streamId: String) -> Observable<MixEntryContents> {
         return Session.rx_send(StreamGetRequest(context, streamId: streamId))
+            .map({ json -> MixEntryContents in MixEntryContents.convert(json: json) })
     }
 }

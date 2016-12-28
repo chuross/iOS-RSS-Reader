@@ -13,7 +13,6 @@ protocol RequestContext {
     var baseUrl: URL { get }
 }
 
-
 public class DefaultRequestContext: RequestContext {
 
     var baseUrl: URL { return URL(string: "https://cloud.feedly.com/v3")! }

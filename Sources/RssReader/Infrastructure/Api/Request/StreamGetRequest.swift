@@ -12,8 +12,6 @@ import ObjectMapper
 
 struct StreamGetRequest: Request {
 
-    typealias Response = MixContents
-
     var baseURL: URL { return context.baseUrl }
     var method: HTTPMethod { return .get }
     var path: String { return "/mixes/contents" }
@@ -31,9 +29,9 @@ struct StreamGetRequest: Request {
         self.streamId = streamId
     }
 
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [String: Any] {
         if let dictionary = object as? [String: Any] {
-            return Mapper<Response>().map(JSON: dictionary)!
+            return dictionary
         } else {
             throw ResponseError.unexpectedObject(object)
         }

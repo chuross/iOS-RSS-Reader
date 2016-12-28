@@ -17,10 +17,14 @@
 		D435B1DE1E11533D002BDBBC /* RssReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1DD1E11533D002BDBBC /* RssReaderTests.swift */; };
 		D435B1F11E118ACA002BDBBC /* FeedlyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */; };
 		D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1F41E118D24002BDBBC /* Session+Rx.swift */; };
-		D435B1FD1E123F8B002BDBBC /* MixContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1FC1E123F8B002BDBBC /* MixContents.swift */; };
-		D435B1FF1E12403F002BDBBC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1FE1E12403F002BDBBC /* Entry.swift */; };
 		D435B2061E128C44002BDBBC /* StreamGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2051E128C44002BDBBC /* StreamGetRequest.swift */; };
 		D435B20A1E128F0C002BDBBC /* RequestContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2091E128F0C002BDBBC /* RequestContext.swift */; };
+		D435B20D1E13AF1C002BDBBC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B20C1E13AF1C002BDBBC /* Entry.swift */; };
+		D435B20F1E13AF5E002BDBBC /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B20E1E13AF5E002BDBBC /* Entity.swift */; };
+		D435B2111E13B06F002BDBBC /* ValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2101E13B06F002BDBBC /* ValueObject.swift */; };
+		D435B2131E13B5B3002BDBBC /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2121E13B5B3002BDBBC /* Identity.swift */; };
+		D435B2151E13C969002BDBBC /* MixEntryContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2141E13C969002BDBBC /* MixEntryContents.swift */; };
+		D435B2171E13D7EE002BDBBC /* EntryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2161E13D7EE002BDBBC /* EntryId.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +55,14 @@
 		D435B1DF1E11533D002BDBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedlyApi.swift; sourceTree = "<group>"; };
 		D435B1F41E118D24002BDBBC /* Session+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+Rx.swift"; sourceTree = "<group>"; };
-		D435B1FC1E123F8B002BDBBC /* MixContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixContents.swift; sourceTree = "<group>"; };
-		D435B1FE1E12403F002BDBBC /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		D435B2051E128C44002BDBBC /* StreamGetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamGetRequest.swift; sourceTree = "<group>"; };
 		D435B2091E128F0C002BDBBC /* RequestContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestContext.swift; sourceTree = "<group>"; };
+		D435B20C1E13AF1C002BDBBC /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		D435B20E1E13AF5E002BDBBC /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		D435B2101E13B06F002BDBBC /* ValueObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueObject.swift; sourceTree = "<group>"; };
+		D435B2121E13B5B3002BDBBC /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
+		D435B2141E13C969002BDBBC /* MixEntryContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixEntryContents.swift; sourceTree = "<group>"; };
+		D435B2161E13D7EE002BDBBC /* EntryId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryId.swift; sourceTree = "<group>"; };
 		F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +120,7 @@
 		D435B1C71E11533D002BDBBC /* RssReader */ = {
 			isa = PBXGroup;
 			children = (
+				D435B20B1E13AEA7002BDBBC /* Domain */,
 				D435B1EB1E11791A002BDBBC /* Infrastructure */,
 				D435B1C81E11533D002BDBBC /* AppDelegate.swift */,
 				D435B1CF1E11533D002BDBBC /* Assets.xcassets */,
@@ -161,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				D435B2021E1284CD002BDBBC /* Request */,
-				D435B1F71E11986E002BDBBC /* Resource */,
 				D435B1F01E118ACA002BDBBC /* FeedlyApi.swift */,
 				D435B2091E128F0C002BDBBC /* RequestContext.swift */,
 			);
@@ -176,21 +184,33 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		D435B1F71E11986E002BDBBC /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				D435B1FE1E12403F002BDBBC /* Entry.swift */,
-				D435B1FC1E123F8B002BDBBC /* MixContents.swift */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		D435B2021E1284CD002BDBBC /* Request */ = {
 			isa = PBXGroup;
 			children = (
 				D435B2051E128C44002BDBBC /* StreamGetRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		D435B20B1E13AEA7002BDBBC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D435B2181E13D9DC002BDBBC /* core */,
+				D435B20C1E13AF1C002BDBBC /* Entry.swift */,
+				D435B2141E13C969002BDBBC /* MixEntryContents.swift */,
+				D435B2161E13D7EE002BDBBC /* EntryId.swift */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		D435B2181E13D9DC002BDBBC /* core */ = {
+			isa = PBXGroup;
+			children = (
+				D435B20E1E13AF5E002BDBBC /* Entity.swift */,
+				D435B2121E13B5B3002BDBBC /* Identity.swift */,
+				D435B2101E13B06F002BDBBC /* ValueObject.swift */,
+			);
+			name = core;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
@@ -404,14 +424,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D435B1FF1E12403F002BDBBC /* Entry.swift in Sources */,
-				D435B1FD1E123F8B002BDBBC /* MixContents.swift in Sources */,
 				D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */,
 				D435B1CB1E11533D002BDBBC /* ViewController.swift in Sources */,
 				D435B20A1E128F0C002BDBBC /* RequestContext.swift in Sources */,
+				D435B2171E13D7EE002BDBBC /* EntryId.swift in Sources */,
 				D435B1F11E118ACA002BDBBC /* FeedlyApi.swift in Sources */,
+				D435B20F1E13AF5E002BDBBC /* Entity.swift in Sources */,
+				D435B2131E13B5B3002BDBBC /* Identity.swift in Sources */,
+				D435B2111E13B06F002BDBBC /* ValueObject.swift in Sources */,
+				D435B20D1E13AF1C002BDBBC /* Entry.swift in Sources */,
 				D435B2061E128C44002BDBBC /* StreamGetRequest.swift in Sources */,
 				D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */,
+				D435B2151E13C969002BDBBC /* MixEntryContents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
