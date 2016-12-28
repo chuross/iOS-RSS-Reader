@@ -17,9 +17,9 @@ struct StreamGetRequest: Request {
     var baseURL: URL { return context.baseUrl }
     var method: HTTPMethod { return .get }
     var path: String { return "/mixes/contents" }
-    var parameters: Any {
+    var parameters: Any? {
         return [
-            "stream_id": streamId
+            "streamId": streamId
         ]
     }
     private let context: RequestContext
