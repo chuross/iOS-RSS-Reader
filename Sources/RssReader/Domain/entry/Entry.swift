@@ -22,9 +22,9 @@ class Entry: Entity {
     }
 
     static func convert(json: [String: Any]) -> Entry? {
-        guard let id = json["id"], id is String else { return nil }
+        guard let id = json["id"] as? String else { return nil }
         return Entry(
-            id: EntryId(id as! String),
+            id: EntryId(id),
             meta: EntryMeta.convert(json: json)
         )
     }
