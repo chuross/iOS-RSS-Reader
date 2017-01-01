@@ -13,14 +13,19 @@ class Entry: Entity {
     typealias ID = EntryId
 
     let id: EntryId
+    let meta: EntryMeta?
 
 
-    init(id: EntryId) {
+    init(id: EntryId, meta: EntryMeta?) {
         self.id = id
+        self.meta = meta
     }
 
     static func convert(json: [String: Any]) -> Entry? {
         guard let id = json["id"], id is String else { return nil }
-        return Entry(id: EntryId(id as! String))
+        return Entry(
+            id: EntryId(id as! String),
+            meta: EntryMeta.convert(json: json)
+        )
     }
 }

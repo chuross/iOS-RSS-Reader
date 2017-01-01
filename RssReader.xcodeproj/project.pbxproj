@@ -25,6 +25,7 @@
 		D435B2131E13B5B3002BDBBC /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2121E13B5B3002BDBBC /* Identity.swift */; };
 		D435B2151E13C969002BDBBC /* MixEntryContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2141E13C969002BDBBC /* MixEntryContents.swift */; };
 		D435B2171E13D7EE002BDBBC /* EntryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2161E13D7EE002BDBBC /* EntryId.swift */; };
+		D46EC3A31E193AEC000339AA /* EntryMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EC3A21E193AEC000339AA /* EntryMeta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D435B2121E13B5B3002BDBBC /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		D435B2141E13C969002BDBBC /* MixEntryContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixEntryContents.swift; sourceTree = "<group>"; };
 		D435B2161E13D7EE002BDBBC /* EntryId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryId.swift; sourceTree = "<group>"; };
+		D46EC3A21E193AEC000339AA /* EntryMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryMeta.swift; sourceTree = "<group>"; };
 		F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 				D435B20C1E13AF1C002BDBBC /* Entry.swift */,
 				D435B2141E13C969002BDBBC /* MixEntryContents.swift */,
 				D435B2161E13D7EE002BDBBC /* EntryId.swift */,
+				D46EC3A21E193AEC000339AA /* EntryMeta.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				D435B2171E13D7EE002BDBBC /* EntryId.swift in Sources */,
 				D435B1F11E118ACA002BDBBC /* FeedlyApi.swift in Sources */,
 				D435B20F1E13AF5E002BDBBC /* Entity.swift in Sources */,
+				D46EC3A31E193AEC000339AA /* EntryMeta.swift in Sources */,
 				D435B2131E13B5B3002BDBBC /* Identity.swift in Sources */,
 				D435B2111E13B06F002BDBBC /* ValueObject.swift in Sources */,
 				D435B20D1E13AF1C002BDBBC /* Entry.swift in Sources */,
