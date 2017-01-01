@@ -201,11 +201,12 @@
 		D435B20B1E13AEA7002BDBBC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				D46EC3A71E196560000339AA /* feed */,
-				D46EC3A41E19615A000339AA /* entry */,
 				D435B2181E13D9DC002BDBBC /* core */,
+				D46EC3A41E19615A000339AA /* entry */,
+				D46EC3A71E196560000339AA /* feed */,
 			);
 			name = Domain;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		D435B2181E13D9DC002BDBBC /* core */ = {
@@ -216,6 +217,7 @@
 				D435B2101E13B06F002BDBBC /* ValueObject.swift */,
 			);
 			name = core;
+			path = core;
 			sourceTree = "<group>";
 		};
 		D46EC3A41E19615A000339AA /* entry */ = {
@@ -224,10 +226,11 @@
 				D435B20C1E13AF1C002BDBBC /* Entry.swift */,
 				D435B2161E13D7EE002BDBBC /* EntryId.swift */,
 				D46EC3A21E193AEC000339AA /* EntryMeta.swift */,
-				D435B2141E13C969002BDBBC /* MixEntryContents.swift */,
 				D46EC3A51E19618E000339AA /* EntryRepository.swift */,
+				D435B2141E13C969002BDBBC /* MixEntryContents.swift */,
 			);
 			name = entry;
+			path = entry;
 			sourceTree = "<group>";
 		};
 		D46EC3A71E196560000339AA /* feed */ = {
@@ -236,6 +239,7 @@
 				D46EC3A81E19656E000339AA /* FeedId.swift */,
 			);
 			name = feed;
+			path = feed;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
