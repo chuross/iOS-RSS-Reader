@@ -26,6 +26,8 @@
 		D435B2151E13C969002BDBBC /* MixEntryContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2141E13C969002BDBBC /* MixEntryContents.swift */; };
 		D435B2171E13D7EE002BDBBC /* EntryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B2161E13D7EE002BDBBC /* EntryId.swift */; };
 		D46EC3A31E193AEC000339AA /* EntryMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EC3A21E193AEC000339AA /* EntryMeta.swift */; };
+		D46EC3A61E19618E000339AA /* EntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EC3A51E19618E000339AA /* EntryRepository.swift */; };
+		D46EC3A91E19656E000339AA /* FeedId.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EC3A81E19656E000339AA /* FeedId.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		D435B2141E13C969002BDBBC /* MixEntryContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixEntryContents.swift; sourceTree = "<group>"; };
 		D435B2161E13D7EE002BDBBC /* EntryId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryId.swift; sourceTree = "<group>"; };
 		D46EC3A21E193AEC000339AA /* EntryMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryMeta.swift; sourceTree = "<group>"; };
+		D46EC3A51E19618E000339AA /* EntryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryRepository.swift; sourceTree = "<group>"; };
+		D46EC3A81E19656E000339AA /* FeedId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedId.swift; sourceTree = "<group>"; };
 		F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,11 +201,9 @@
 		D435B20B1E13AEA7002BDBBC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D46EC3A71E196560000339AA /* feed */,
+				D46EC3A41E19615A000339AA /* entry */,
 				D435B2181E13D9DC002BDBBC /* core */,
-				D435B20C1E13AF1C002BDBBC /* Entry.swift */,
-				D435B2141E13C969002BDBBC /* MixEntryContents.swift */,
-				D435B2161E13D7EE002BDBBC /* EntryId.swift */,
-				D46EC3A21E193AEC000339AA /* EntryMeta.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -214,6 +216,26 @@
 				D435B2101E13B06F002BDBBC /* ValueObject.swift */,
 			);
 			name = core;
+			sourceTree = "<group>";
+		};
+		D46EC3A41E19615A000339AA /* entry */ = {
+			isa = PBXGroup;
+			children = (
+				D435B20C1E13AF1C002BDBBC /* Entry.swift */,
+				D435B2161E13D7EE002BDBBC /* EntryId.swift */,
+				D46EC3A21E193AEC000339AA /* EntryMeta.swift */,
+				D435B2141E13C969002BDBBC /* MixEntryContents.swift */,
+				D46EC3A51E19618E000339AA /* EntryRepository.swift */,
+			);
+			name = entry;
+			sourceTree = "<group>";
+		};
+		D46EC3A71E196560000339AA /* feed */ = {
+			isa = PBXGroup;
+			children = (
+				D46EC3A81E19656E000339AA /* FeedId.swift */,
+			);
+			name = feed;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
@@ -427,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46EC3A91E19656E000339AA /* FeedId.swift in Sources */,
 				D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */,
 				D435B1CB1E11533D002BDBBC /* ViewController.swift in Sources */,
 				D435B20A1E128F0C002BDBBC /* RequestContext.swift in Sources */,
@@ -435,6 +458,7 @@
 				D435B20F1E13AF5E002BDBBC /* Entity.swift in Sources */,
 				D46EC3A31E193AEC000339AA /* EntryMeta.swift in Sources */,
 				D435B2131E13B5B3002BDBBC /* Identity.swift in Sources */,
+				D46EC3A61E19618E000339AA /* EntryRepository.swift in Sources */,
 				D435B2111E13B06F002BDBBC /* ValueObject.swift in Sources */,
 				D435B20D1E13AF1C002BDBBC /* Entry.swift in Sources */,
 				D435B2061E128C44002BDBBC /* StreamGetRequest.swift in Sources */,

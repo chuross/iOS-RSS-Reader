@@ -28,9 +28,9 @@ struct StreamGetRequest: Request {
         self.streamId = streamId
     }
 
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> [String: Any] {
+    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> MixEntryContents {
         if let dictionary = object as? [String: Any] {
-            return dictionary
+            return MixEntryContents.convert(json: dictionary)
         } else {
             throw ResponseError.unexpectedObject(object)
         }
