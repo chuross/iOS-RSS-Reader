@@ -8,7 +8,6 @@
 
 import Foundation
 import APIKit
-import ObjectMapper
 
 struct StreamGetRequest: Request {
 

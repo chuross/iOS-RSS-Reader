@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Equals
 
 class MixEntryContents: ValueObject {
 

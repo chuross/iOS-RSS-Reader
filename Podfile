@@ -9,7 +9,6 @@ target 'RssReader' do
   pod 'RxCocoa', '~> 3.0'
   pod 'APIKit', '~> 3.0'
   pod 'Swinject', '2.0.0-beta.3'
-  pod 'Equals', '~> 2.0.0'
 end
 
 target 'RssReaderTests' do
