@@ -126,14 +126,12 @@
 		D435B1C71E11533D002BDBBC /* RssReader */ = {
 			isa = PBXGroup;
 			children = (
+				D46EC3AA1E197B10000339AA /* Application */,
 				D435B20B1E13AEA7002BDBBC /* Domain */,
 				D435B1EB1E11791A002BDBBC /* Infrastructure */,
-				D435B1C81E11533D002BDBBC /* AppDelegate.swift */,
+				D46EC3AB1E197ED9000339AA /* Ui */,
 				D435B1CF1E11533D002BDBBC /* Assets.xcassets */,
 				D435B1D41E11533D002BDBBC /* Info.plist */,
-				D435B1D11E11533D002BDBBC /* LaunchScreen.storyboard */,
-				D435B1CC1E11533D002BDBBC /* Main.storyboard */,
-				D435B1CA1E11533D002BDBBC /* ViewController.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -205,7 +203,6 @@
 				D46EC3A41E19615A000339AA /* entry */,
 				D46EC3A71E196560000339AA /* feed */,
 			);
-			name = Domain;
 			path = Domain;
 			sourceTree = "<group>";
 		};
@@ -216,7 +213,6 @@
 				D435B2121E13B5B3002BDBBC /* Identity.swift */,
 				D435B2101E13B06F002BDBBC /* ValueObject.swift */,
 			);
-			name = core;
 			path = core;
 			sourceTree = "<group>";
 		};
@@ -229,7 +225,6 @@
 				D46EC3A51E19618E000339AA /* EntryRepository.swift */,
 				D435B2141E13C969002BDBBC /* MixEntryContents.swift */,
 			);
-			name = entry;
 			path = entry;
 			sourceTree = "<group>";
 		};
@@ -238,8 +233,36 @@
 			children = (
 				D46EC3A81E19656E000339AA /* FeedId.swift */,
 			);
-			name = feed;
 			path = feed;
+			sourceTree = "<group>";
+		};
+		D46EC3AA1E197B10000339AA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D435B1C81E11533D002BDBBC /* AppDelegate.swift */,
+			);
+			name = Application;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D46EC3AB1E197ED9000339AA /* Ui */ = {
+			isa = PBXGroup;
+			children = (
+				D46EC3AC1E197EE5000339AA /* Storybord */,
+				D435B1CA1E11533D002BDBBC /* ViewController.swift */,
+			);
+			name = Ui;
+			path = Ui;
+			sourceTree = "<group>";
+		};
+		D46EC3AC1E197EE5000339AA /* Storybord */ = {
+			isa = PBXGroup;
+			children = (
+				D435B1D11E11533D002BDBBC /* LaunchScreen.storyboard */,
+				D435B1CC1E11533D002BDBBC /* Main.storyboard */,
+			);
+			name = Storybord;
+			path = Storybord;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
