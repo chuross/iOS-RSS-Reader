@@ -10,9 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var entryTable: UITableView!
+    private let dataSource = EntryDataSource()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        entryTable.dataSource = self.dataSource
+        entryTable.delegate = self.dataSource
+        entryTable.register(UINib(nibName: EntryViewCell.CELL_ID, bundle: nil), forCellReuseIdentifier: EntryViewCell.CELL_ID)
+
+        let delegate = (UIApplication.shared.delegate) as! AppDelegate
+        EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://feeds.feedburner.com/Techcrunch"))
+            .subscribe(onNext: { entries -> Void in
+                self.dataSource.entries.append(contentsOf: entries)
+                self.entryTable.reloadData()
+            }, onError: { error -> Void in
+            })
+
     }
 
     override func didReceiveMemoryWarning() {

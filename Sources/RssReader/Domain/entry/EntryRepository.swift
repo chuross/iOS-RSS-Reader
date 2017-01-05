@@ -12,10 +12,10 @@ import RxSwift
 
 class EntryRepository {
 
-    let api: FeedlyApi
+    private let api: FeedlyApi
 
     init(container: Container) {
-        api = container.resolve(FeedlyApi.self)!
+        api = FeedlyApi(container.resolve(RequestContext.self)!)
     }
 
     func findAllByFeedId(feedId: FeedId) -> Observable<[Entry]> {

@@ -11,6 +11,8 @@
 		BE72F029294564AAB5F315BD /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B169CAF329F48B4209EF487 /* Pods_RssReader.framework */; };
 		D42256711E1E9587005C857F /* EntryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422566F1E1E9587005C857F /* EntryViewCell.swift */; };
 		D42256721E1E9587005C857F /* EntryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42256701E1E9587005C857F /* EntryViewCell.xib */; };
+		D42256771E1E9911005C857F /* EntryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42256761E1E9911005C857F /* EntryDataSource.swift */; };
+		D422567A1E1EA460005C857F /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42256791E1EA460005C857F /* ViewUtils.swift */; };
 		D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1C81E11533D002BDBBC /* AppDelegate.swift */; };
 		D435B1CB1E11533D002BDBBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1CA1E11533D002BDBBC /* ViewController.swift */; };
 		D435B1CE1E11533D002BDBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D435B1CC1E11533D002BDBBC /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		8B169CAF329F48B4209EF487 /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D422566F1E1E9587005C857F /* EntryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewCell.swift; sourceTree = "<group>"; };
 		D42256701E1E9587005C857F /* EntryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryViewCell.xib; sourceTree = "<group>"; };
+		D42256761E1E9911005C857F /* EntryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDataSource.swift; sourceTree = "<group>"; };
+		D42256791E1EA460005C857F /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		D435B1C51E11533D002BDBBC /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D435B1C81E11533D002BDBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D435B1CA1E11533D002BDBBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,10 +114,29 @@
 		D42256731E1E973C005C857F /* Entry */ = {
 			isa = PBXGroup;
 			children = (
+				D42256761E1E9911005C857F /* EntryDataSource.swift */,
 				D422566F1E1E9587005C857F /* EntryViewCell.swift */,
 				D42256701E1E9587005C857F /* EntryViewCell.xib */,
 			);
 			path = Entry;
+			sourceTree = "<group>";
+		};
+		D42256751E1E9825005C857F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D42256731E1E973C005C857F /* Entry */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		D42256781E1EA449005C857F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D42256791E1EA460005C857F /* ViewUtils.swift */,
+			);
+			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D435B1BC1E11533D002BDBBC = {
@@ -260,8 +283,9 @@
 		D46EC3AB1E197ED9000339AA /* Ui */ = {
 			isa = PBXGroup;
 			children = (
-				D42256731E1E973C005C857F /* Entry */,
 				D46EC3AC1E197EE5000339AA /* Storyboard */,
+				D42256781E1EA449005C857F /* Utils */,
+				D42256751E1E9825005C857F /* View */,
 				D435B1CA1E11533D002BDBBC /* ViewController.swift */,
 			);
 			path = Ui;
@@ -274,7 +298,7 @@
 				D435B1CC1E11533D002BDBBC /* Main.storyboard */,
 			);
 			name = Storyboard;
-			path = Storybord;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		FBA487384BF916527B1F271D /* Frameworks */ = {
@@ -491,6 +515,7 @@
 			files = (
 				D46EC3A91E19656E000339AA /* FeedId.swift in Sources */,
 				D435B1F51E118D24002BDBBC /* Session+Rx.swift in Sources */,
+				D422567A1E1EA460005C857F /* ViewUtils.swift in Sources */,
 				D435B1CB1E11533D002BDBBC /* ViewController.swift in Sources */,
 				D435B20A1E128F0C002BDBBC /* RequestContext.swift in Sources */,
 				D435B2171E13D7EE002BDBBC /* EntryId.swift in Sources */,
@@ -502,6 +527,7 @@
 				D435B2111E13B06F002BDBBC /* ValueObject.swift in Sources */,
 				D42256711E1E9587005C857F /* EntryViewCell.swift in Sources */,
 				D435B20D1E13AF1C002BDBBC /* Entry.swift in Sources */,
+				D42256771E1E9911005C857F /* EntryDataSource.swift in Sources */,
 				D435B2061E128C44002BDBBC /* StreamGetRequest.swift in Sources */,
 				D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */,
 				D435B2151E13C969002BDBBC /* MixEntryContents.swift in Sources */,
