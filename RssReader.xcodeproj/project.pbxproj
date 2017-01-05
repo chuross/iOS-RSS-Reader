@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		635FA3294FC8440F708FD48D /* libPods-RssReaderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */; };
 		BE72F029294564AAB5F315BD /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B169CAF329F48B4209EF487 /* Pods_RssReader.framework */; };
+		D42256711E1E9587005C857F /* EntryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422566F1E1E9587005C857F /* EntryViewCell.swift */; };
+		D42256721E1E9587005C857F /* EntryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42256701E1E9587005C857F /* EntryViewCell.xib */; };
 		D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1C81E11533D002BDBBC /* AppDelegate.swift */; };
 		D435B1CB1E11533D002BDBBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1CA1E11533D002BDBBC /* ViewController.swift */; };
 		D435B1CE1E11533D002BDBBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D435B1CC1E11533D002BDBBC /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		7D9C87ED6F40C99E57F80F5D /* Pods-RssReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssReaderTests/Pods-RssReaderTests.release.xcconfig"; sourceTree = "<group>"; };
 		89EA3C45ED3C00156990E7DB /* Pods-RssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.debug.xcconfig"; sourceTree = "<group>"; };
 		8B169CAF329F48B4209EF487 /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D422566F1E1E9587005C857F /* EntryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewCell.swift; sourceTree = "<group>"; };
+		D42256701E1E9587005C857F /* EntryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryViewCell.xib; sourceTree = "<group>"; };
 		D435B1C51E11533D002BDBBC /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D435B1C81E11533D002BDBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D435B1CA1E11533D002BDBBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 				7D9C87ED6F40C99E57F80F5D /* Pods-RssReaderTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D42256731E1E973C005C857F /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				D422566F1E1E9587005C857F /* EntryViewCell.swift */,
+				D42256701E1E9587005C857F /* EntryViewCell.xib */,
+			);
+			path = Entry;
 			sourceTree = "<group>";
 		};
 		D435B1BC1E11533D002BDBBC = {
@@ -241,27 +254,26 @@
 			children = (
 				D435B1C81E11533D002BDBBC /* AppDelegate.swift */,
 			);
-			name = Application;
 			path = Application;
 			sourceTree = "<group>";
 		};
 		D46EC3AB1E197ED9000339AA /* Ui */ = {
 			isa = PBXGroup;
 			children = (
-				D46EC3AC1E197EE5000339AA /* Storybord */,
+				D42256731E1E973C005C857F /* Entry */,
+				D46EC3AC1E197EE5000339AA /* Storyboard */,
 				D435B1CA1E11533D002BDBBC /* ViewController.swift */,
 			);
-			name = Ui;
 			path = Ui;
 			sourceTree = "<group>";
 		};
-		D46EC3AC1E197EE5000339AA /* Storybord */ = {
+		D46EC3AC1E197EE5000339AA /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				D435B1D11E11533D002BDBBC /* LaunchScreen.storyboard */,
 				D435B1CC1E11533D002BDBBC /* Main.storyboard */,
 			);
-			name = Storybord;
+			name = Storyboard;
 			path = Storybord;
 			sourceTree = "<group>";
 		};
@@ -366,6 +378,7 @@
 				D435B1D31E11533D002BDBBC /* LaunchScreen.storyboard in Resources */,
 				D435B1D01E11533D002BDBBC /* Assets.xcassets in Resources */,
 				D435B1CE1E11533D002BDBBC /* Main.storyboard in Resources */,
+				D42256721E1E9587005C857F /* EntryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +500,7 @@
 				D435B2131E13B5B3002BDBBC /* Identity.swift in Sources */,
 				D46EC3A61E19618E000339AA /* EntryRepository.swift in Sources */,
 				D435B2111E13B06F002BDBBC /* ValueObject.swift in Sources */,
+				D42256711E1E9587005C857F /* EntryViewCell.swift in Sources */,
 				D435B20D1E13AF1C002BDBBC /* Entry.swift in Sources */,
 				D435B2061E128C44002BDBBC /* StreamGetRequest.swift in Sources */,
 				D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */,
