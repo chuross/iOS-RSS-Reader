@@ -24,12 +24,11 @@ class EntryMeta: ValueObject {
     public static func convert(json: [String: Any]) -> EntryMeta? {
         guard
             let title = json["title"] as? String,
-            let url = json["url"] as? String
+            let url = json["originId"] as? String
         else {
             return nil
         }
-        let thumbnailUrl = (json["thumbnail"] as? String) ?? nil
-
+        let thumbnailUrl = (json["thumbnail"] as? [[String: Any]])?.first?["url"] as? String
         return EntryMeta(
             title: title,
             url: URL(string: url)!,
