@@ -16,16 +16,19 @@ struct StreamGetRequest: Request {
     var path: String { return "/mixes/contents" }
     var parameters: Any? {
         return [
-            "streamId": streamId
+            "streamId": streamId,
+            "count": count
         ]
     }
     private let context: RequestContext
     private let streamId: String
+    private let count: Int
 
 
-    init(_ context:RequestContext, streamId: String) {
+    init(_ context:RequestContext, streamId: String, count: Int = 20) {
         self.context = context
         self.streamId = streamId
+        self.count = count
     }
 
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> MixEntryContents {

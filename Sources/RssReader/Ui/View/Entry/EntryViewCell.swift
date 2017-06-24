@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EntryViewCell: UITableViewCell {
 
@@ -17,5 +18,6 @@ class EntryViewCell: UITableViewCell {
 
     func setEntry(_ entry: Entry) {
         title.text = entry.meta?.title ?? "no title"
+        thumbnailImage.kf.setImage(with: entry.meta?.thumbnailUrl)
     }
 }

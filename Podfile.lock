@@ -1,6 +1,7 @@
 PODS:
   - APIKit (3.1.1):
     - Result (~> 3.0)
+  - Kingfisher (3.2.4)
   - Result (3.1.0)
   - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
@@ -9,17 +10,19 @@ PODS:
 
 DEPENDENCIES:
   - APIKit (~> 3.0)
+  - Kingfisher (~> 3.0)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - Swinject (= 2.0.0-beta.3)
 
 SPEC CHECKSUMS:
   APIKit: 7460983f490d3bde6aaaaa4164d18c9865a6f91d
+  Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   Swinject: a94dd23e05c7b557e53ee4e0f795f15cba19c7df
 
-PODFILE CHECKSUM: 1c06ba451c9a3ff23bbe7985e636306cd0e61261
+PODFILE CHECKSUM: e1d786680a0e2602d0443f0d272ab54109288040
 
 COCOAPODS: 1.1.1
