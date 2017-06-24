@@ -20,7 +20,9 @@ class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EntryViewCell.CELL_ID, for: indexPath) as! EntryViewCell
+
         cell.setEntry(entries[indexPath.row])
+
         return cell
     }
 }

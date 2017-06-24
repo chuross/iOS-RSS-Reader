@@ -15,7 +15,6 @@ class EntryViewCell: UITableViewCell {
     @IBOutlet weak var thumbnailImage: UIImageView!
     @IBOutlet weak var title: UILabel!
 
-
     func setEntry(_ entry: Entry) {
         title.text = entry.meta?.title ?? "no title"
         thumbnailImage.kf.setImage(with: entry.meta?.thumbnailUrl)

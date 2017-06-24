@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var entryTable: UITableView!
     private let dataSource = EntryDataSource()
+    private var disposable: Disposable?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,8 @@ class ViewController: UIViewController {
         entryTable.register(UINib(nibName: EntryViewCell.CELL_ID, bundle: nil), forCellReuseIdentifier: EntryViewCell.CELL_ID)
 
         let delegate = (UIApplication.shared.delegate) as! AppDelegate
-        EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://feeds.feedburner.com/Techcrunch"))
+
+        disposable = EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://feeds.feedburner.com/Techcrunch"))
             .subscribe(onNext: { entries -> Void in
                 self.dataSource.entries.append(contentsOf: entries)
                 self.entryTable.reloadData()
@@ -34,6 +37,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.disposable?.dispose()
+    }
 
 }
 
