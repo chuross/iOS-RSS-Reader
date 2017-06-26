@@ -25,4 +25,5 @@ class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+
 }

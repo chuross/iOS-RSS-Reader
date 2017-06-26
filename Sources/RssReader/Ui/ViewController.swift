@@ -17,6 +17,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        entryTable.estimatedRowHeight = 100
+        entryTable.rowHeight = UITableViewAutomaticDimension
         entryTable.dataSource = self.dataSource
         entryTable.delegate = self.dataSource
         entryTable.register(UINib(nibName: EntryViewCell.CELL_ID, bundle: nil), forCellReuseIdentifier: EntryViewCell.CELL_ID)
