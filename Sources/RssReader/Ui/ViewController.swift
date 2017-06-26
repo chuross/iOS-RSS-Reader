@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var entryTable: UITableView!
     private let dataSource = EntryDataSource()
-    private var disposable: Disposable?
+    private var disposeBag: DisposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,13 @@ class ViewController: UIViewController {
 
         let delegate = (UIApplication.shared.delegate) as! AppDelegate
 
-        disposable = EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://feeds.feedburner.com/Techcrunch"))
-            .subscribe(onNext: { entries -> Void in
-                self.dataSource.entries.append(contentsOf: entries)
-                self.entryTable.reloadData()
+        EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://feeds.feedburner.com/Techcrunch"))
+            .subscribe(onNext: { [weak self] entries -> Void in
+                self?.dataSource.entries.append(contentsOf: entries)
+                self?.entryTable.reloadData()
             }, onError: { error -> Void in
             })
+            .addDisposableTo(disposeBag)
 
     }
 
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        self.disposable?.dispose()
+        disposeBag = DisposeBag()
     }
 
 }
