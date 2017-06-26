@@ -10,7 +10,6 @@
 		635FA3294FC8440F708FD48D /* libPods-RssReaderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */; };
 		BE72F029294564AAB5F315BD /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B169CAF329F48B4209EF487 /* Pods_RssReader.framework */; };
 		D42256711E1E9587005C857F /* EntryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422566F1E1E9587005C857F /* EntryViewCell.swift */; };
-		D42256721E1E9587005C857F /* EntryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42256701E1E9587005C857F /* EntryViewCell.xib */; };
 		D42256771E1E9911005C857F /* EntryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42256761E1E9911005C857F /* EntryDataSource.swift */; };
 		D422567A1E1EA460005C857F /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42256791E1EA460005C857F /* ViewUtils.swift */; };
 		D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1C81E11533D002BDBBC /* AppDelegate.swift */; };
@@ -32,6 +31,7 @@
 		D46EC3A31E193AEC000339AA /* EntryMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EC3A21E193AEC000339AA /* EntryMeta.swift */; };
 		D46EC3A61E19618E000339AA /* EntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EC3A51E19618E000339AA /* EntryRepository.swift */; };
 		D46EC3A91E19656E000339AA /* FeedId.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EC3A81E19656E000339AA /* FeedId.swift */; };
+		FFE22C8D1F00C828009FE417 /* EntryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE22C8C1F00C828009FE417 /* EntryViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		89EA3C45ED3C00156990E7DB /* Pods-RssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.debug.xcconfig"; sourceTree = "<group>"; };
 		8B169CAF329F48B4209EF487 /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D422566F1E1E9587005C857F /* EntryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewCell.swift; sourceTree = "<group>"; };
-		D42256701E1E9587005C857F /* EntryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryViewCell.xib; sourceTree = "<group>"; };
 		D42256761E1E9911005C857F /* EntryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDataSource.swift; sourceTree = "<group>"; };
 		D42256791E1EA460005C857F /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		D435B1C51E11533D002BDBBC /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +77,7 @@
 		D46EC3A51E19618E000339AA /* EntryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryRepository.swift; sourceTree = "<group>"; };
 		D46EC3A81E19656E000339AA /* FeedId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedId.swift; sourceTree = "<group>"; };
 		F3DA74C4FF4F38F02910E6FC /* libPods-RssReaderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RssReaderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE22C8C1F00C828009FE417 /* EntryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 			children = (
 				D42256761E1E9911005C857F /* EntryDataSource.swift */,
 				D422566F1E1E9587005C857F /* EntryViewCell.swift */,
-				D42256701E1E9587005C857F /* EntryViewCell.xib */,
+				FFE22C8C1F00C828009FE417 /* EntryViewCell.xib */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -126,7 +126,6 @@
 			children = (
 				D42256731E1E973C005C857F /* Entry */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -135,7 +134,6 @@
 			children = (
 				D42256791E1EA460005C857F /* ViewUtils.swift */,
 			);
-			name = Utils;
 			path = Utils;
 			sourceTree = "<group>";
 		};
@@ -297,7 +295,6 @@
 				D435B1D11E11533D002BDBBC /* LaunchScreen.storyboard */,
 				D435B1CC1E11533D002BDBBC /* Main.storyboard */,
 			);
-			name = Storyboard;
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
@@ -400,9 +397,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D435B1D31E11533D002BDBBC /* LaunchScreen.storyboard in Resources */,
+				FFE22C8D1F00C828009FE417 /* EntryViewCell.xib in Resources */,
 				D435B1D01E11533D002BDBBC /* Assets.xcassets in Resources */,
 				D435B1CE1E11533D002BDBBC /* Main.storyboard in Resources */,
-				D42256721E1E9587005C857F /* EntryViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
