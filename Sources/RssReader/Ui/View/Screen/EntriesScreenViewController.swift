@@ -18,6 +18,8 @@ class EntriesScreenViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "練習用RSSアプリ"
+
         entryTable.estimatedRowHeight = 100
         entryTable.rowHeight = UITableViewAutomaticDimension
         entryTable.dataSource = self.dataSource
