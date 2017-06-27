@@ -15,6 +15,8 @@
 		D422567A1E1EA460005C857F /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42256791E1EA460005C857F /* ViewUtils.swift */; };
 		D42BC9E91F02AEAE00110B85 /* EntriesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BC9E81F02AEAE00110B85 /* EntriesScreenViewController.swift */; };
 		D42BC9EB1F02AEFC00110B85 /* EntriesScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42BC9EA1F02AEFC00110B85 /* EntriesScreenViewController.xib */; };
+		D42BC9EE1F02B68200110B85 /* EntryDetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42BC9ED1F02B68200110B85 /* EntryDetailScreenViewController.swift */; };
+		D42BC9F01F02B6B200110B85 /* EntryDetailScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D42BC9EF1F02B6B200110B85 /* EntryDetailScreenViewController.xib */; };
 		D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1C81E11533D002BDBBC /* AppDelegate.swift */; };
 		D435B1D01E11533D002BDBBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D435B1CF1E11533D002BDBBC /* Assets.xcassets */; };
 		D435B1DE1E11533D002BDBBC /* RssReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D435B1DD1E11533D002BDBBC /* RssReaderTests.swift */; };
@@ -55,6 +57,8 @@
 		D42256791E1EA460005C857F /* ViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		D42BC9E81F02AEAE00110B85 /* EntriesScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesScreenViewController.swift; sourceTree = "<group>"; };
 		D42BC9EA1F02AEFC00110B85 /* EntriesScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntriesScreenViewController.xib; sourceTree = "<group>"; };
+		D42BC9ED1F02B68200110B85 /* EntryDetailScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailScreenViewController.swift; sourceTree = "<group>"; };
+		D42BC9EF1F02B6B200110B85 /* EntryDetailScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryDetailScreenViewController.xib; sourceTree = "<group>"; };
 		D435B1C51E11533D002BDBBC /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D435B1C81E11533D002BDBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D435B1CF1E11533D002BDBBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,8 +145,9 @@
 			children = (
 				D42BC9E81F02AEAE00110B85 /* EntriesScreenViewController.swift */,
 				D42BC9EA1F02AEFC00110B85 /* EntriesScreenViewController.xib */,
+				D42BC9ED1F02B68200110B85 /* EntryDetailScreenViewController.swift */,
+				D42BC9EF1F02B6B200110B85 /* EntryDetailScreenViewController.xib */,
 			);
-			name = Screen;
 			path = Screen;
 			sourceTree = "<group>";
 		};
@@ -151,7 +156,6 @@
 			children = (
 				D42256731E1E973C005C857F /* Entry */,
 			);
-			name = Component;
 			path = Component;
 			sourceTree = "<group>";
 		};
@@ -403,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42BC9F01F02B6B200110B85 /* EntryDetailScreenViewController.xib in Resources */,
 				D42BC9EB1F02AEFC00110B85 /* EntriesScreenViewController.xib in Resources */,
 				D435B1D01E11533D002BDBBC /* Assets.xcassets in Resources */,
 				D42256721E1E9587005C857F /* EntryViewCell.xib in Resources */,
@@ -534,6 +539,7 @@
 				D435B2061E128C44002BDBBC /* StreamGetRequest.swift in Sources */,
 				D435B1C91E11533D002BDBBC /* AppDelegate.swift in Sources */,
 				D435B2151E13C969002BDBBC /* MixEntryContents.swift in Sources */,
+				D42BC9EE1F02B68200110B85 /* EntryDetailScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

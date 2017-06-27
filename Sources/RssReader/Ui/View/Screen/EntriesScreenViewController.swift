@@ -18,7 +18,7 @@ class EntriesScreenViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "練習用RSSアプリ"
+        title = "記事一覧"
 
         entryTable.estimatedRowHeight = 100
         entryTable.rowHeight = UITableViewAutomaticDimension

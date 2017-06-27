@@ -13,7 +13,6 @@ class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     var entries: [Entry] = []
 
-
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entries.count
     }
@@ -24,6 +23,11 @@ class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         cell.setEntry(entries[indexPath.row])
 
         return cell
+    }
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = EntryDetailScreenViewController()
+        AppDelegate.application().navigationController?.pushViewController(viewController, animated: true)
     }
 
 }
