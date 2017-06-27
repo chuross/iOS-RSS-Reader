@@ -1,15 +1,16 @@
 //
-//  ViewController.swift
+//  EntriesScreenViewController.swift
 //  RssReader
 //
-//  Created by chuross on 2016/12/26.
-//  Copyright © 2016年 chuross. All rights reserved.
+//  Created by chuross on 2017/06/28.
+//  Copyright © 2017年 chuross. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import RxSwift
 
-class ViewController: UIViewController {
+class EntriesScreenViewController : UIViewController {
 
     @IBOutlet weak var entryTable: UITableView!
     private let dataSource = EntryDataSource()
@@ -29,15 +30,10 @@ class ViewController: UIViewController {
             .subscribe(onNext: { [weak self] entries -> Void in
                 self?.dataSource.entries.append(contentsOf: entries)
                 self?.entryTable.reloadData()
-            }, onError: { error -> Void in
+                }, onError: { error -> Void in
             })
             .addDisposableTo(disposeBag)
 
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,4 +41,3 @@ class ViewController: UIViewController {
     }
 
 }
-
