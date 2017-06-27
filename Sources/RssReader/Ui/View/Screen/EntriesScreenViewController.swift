@@ -28,7 +28,7 @@ class EntriesScreenViewController : UIViewController {
 
         let delegate = (UIApplication.shared.delegate) as! AppDelegate
 
-        EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://feeds.feedburner.com/Techcrunch"))
+        EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://rocketnews24.com/feed/"))
             .subscribe(onNext: { [weak self] entries -> Void in
                 self?.dataSource.entries.append(contentsOf: entries)
                 self?.entryTable.reloadData()
