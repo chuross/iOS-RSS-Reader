@@ -26,7 +26,10 @@ class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let entry = entries[indexPath.row]
         let viewController = EntryDetailScreenViewController()
+        viewController.entry = entry
+
         AppDelegate.application().navigationController?.pushViewController(viewController, animated: true)
     }
 
