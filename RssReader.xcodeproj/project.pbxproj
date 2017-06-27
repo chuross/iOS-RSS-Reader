@@ -122,8 +122,8 @@
 		D42256751E1E9825005C857F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D42BC9EC1F02B0E600110B85 /* Component */,
 				D42BC9E71F02AE7600110B85 /* Screen */,
-				D42256731E1E973C005C857F /* Entry */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +143,16 @@
 				D42BC9EA1F02AEFC00110B85 /* EntriesScreenViewController.xib */,
 			);
 			name = Screen;
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		D42BC9EC1F02B0E600110B85 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D42256731E1E973C005C857F /* Entry */,
+			);
+			name = Component;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		D435B1BC1E11533D002BDBBC = {
