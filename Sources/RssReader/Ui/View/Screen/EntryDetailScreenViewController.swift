@@ -23,6 +23,8 @@ class EntryDetailScreenViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = entry?.meta?.title
+
         guard let webView = webView,
             let entryMeta = entry?.meta else { return }
 
