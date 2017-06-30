@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedScreenViewController" customModule="RssReader" customModuleProvider="target">
             <connections>
                 <outlet property="feedCollection" destination="KC7-Bf-qjz" id="d9u-ya-Cyd"/>
-                <outlet property="feedSearchBar" destination="B1i-0J-pkt" id="z3l-bh-zJI"/>
+                <outlet property="searchDisplayController" destination="tgP-3v-bpk" id="rbC-Dw-kji"/>
                 <outlet property="view" destination="sxh-yX-3tZ" id="CJ1-ed-IaO"/>
             </connections>
         </placeholder>
@@ -21,12 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="B1i-0J-pkt">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KC7-Bf-qjz">
-                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lSR-Ba-nLi">
                         <size key="itemSize" width="50" height="50"/>
@@ -38,15 +34,20 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="B1i-0J-pkt" firstAttribute="top" secondItem="sxh-yX-3tZ" secondAttribute="top" id="AqI-Xn-JYI"/>
-                <constraint firstAttribute="trailing" secondItem="B1i-0J-pkt" secondAttribute="trailing" id="Gd0-Sy-Kig"/>
-                <constraint firstAttribute="bottom" secondItem="KC7-Bf-qjz" secondAttribute="bottom" id="L3C-9q-XVe"/>
-                <constraint firstAttribute="trailing" secondItem="KC7-Bf-qjz" secondAttribute="trailing" id="V2G-eo-g0j"/>
-                <constraint firstItem="KC7-Bf-qjz" firstAttribute="top" secondItem="B1i-0J-pkt" secondAttribute="bottom" id="rEI-ez-cj7"/>
-                <constraint firstItem="B1i-0J-pkt" firstAttribute="leading" secondItem="sxh-yX-3tZ" secondAttribute="leading" id="wI7-nA-S1b"/>
-                <constraint firstItem="KC7-Bf-qjz" firstAttribute="leading" secondItem="sxh-yX-3tZ" secondAttribute="leading" id="yK8-Yl-YUc"/>
+                <constraint firstAttribute="trailing" secondItem="KC7-Bf-qjz" secondAttribute="trailing" id="4kC-xh-Ee9"/>
+                <constraint firstItem="KC7-Bf-qjz" firstAttribute="leading" secondItem="sxh-yX-3tZ" secondAttribute="leading" id="d3a-dg-AKK"/>
+                <constraint firstItem="KC7-Bf-qjz" firstAttribute="top" secondItem="sxh-yX-3tZ" secondAttribute="top" id="idg-m0-Obd"/>
+                <constraint firstAttribute="bottom" secondItem="KC7-Bf-qjz" secondAttribute="bottom" id="u99-vx-HCn"/>
             </constraints>
             <point key="canvasLocation" x="-56.5" y="99.5"/>
         </view>
+        <searchDisplayController id="tgP-3v-bpk">
+            <connections>
+                <outlet property="delegate" destination="-1" id="eKy-Lk-dWO"/>
+                <outlet property="searchContentsController" destination="-1" id="Q3A-1Q-RzX"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="nTG-An-dio"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="cvR-Vu-WHj"/>
+            </connections>
+        </searchDisplayController>
     </objects>
 </document>

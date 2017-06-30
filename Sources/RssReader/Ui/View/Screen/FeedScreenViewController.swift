@@ -11,9 +11,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FeedScreenViewController : UIViewController {
+class FeedScreenViewController : UIViewController, UISearchBarDelegate {
 
-    @IBOutlet weak var feedSearchBar: UISearchBar!
+    var feedSearchBar: UISearchBar!
     @IBOutlet weak var feedCollection: UICollectionView!
 
     private let dataSource: FeedDataSource = FeedDataSource()
@@ -22,19 +22,21 @@ class FeedScreenViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "フィード一覧"
+        let delegate = (UIApplication.shared.delegate) as! AppDelegate
 
-        feedSearchBar.rx.searchButtonClicked
-            .subscribe(onNext: { _ in
-                //TODO
-            })
-            .addDisposableTo(disposeBag)
+        if let navigationController = delegate.navigationController {
+            feedSearchBar = UISearchBar(frame: navigationController.navigationBar.bounds)
+            feedSearchBar.placeholder = "ニュースサイト検索"
+            feedSearchBar.keyboardType = UIKeyboardType.default
+            feedSearchBar.delegate = self
+
+            navigationItem.titleView = feedSearchBar
+            navigationItem.titleView?.frame = feedSearchBar.frame
+        }
 
         feedCollection.delegate = dataSource
         feedCollection.dataSource = dataSource
         feedCollection.register(ViewUtils.instantiateNib(FeedViewCell.CELL_ID), forCellWithReuseIdentifier: FeedViewCell.CELL_ID)
-
-        let delegate = (UIApplication.shared.delegate) as! AppDelegate
 
         dataSource.itemClickLitener = { feed -> Void in
             let viewController = EntriesScreenViewController()
@@ -42,14 +44,27 @@ class FeedScreenViewController : UIViewController {
             delegate.navigationController?.pushViewController(viewController, animated: true)
         }
 
-        FeedRepository(container: delegate.container).findAllByKeyword(query: "F1")
+        search(query: "F1")
+    }
+
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text {
+            search(query: text)
+        }
+    }
+
+    private func search(query: String) {
+        let delegate = (UIApplication.shared.delegate) as! AppDelegate
+
+        FeedRepository(container: delegate.container).findAllByKeyword(query: query)
             .subscribeOn(ConcurrentMainScheduler.instance)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] feeds -> Void in
+                self?.dataSource.feeds.removeAll()
                 self?.dataSource.feeds.append(contentsOf: feeds)
                 self?.feedCollection.reloadData()
-            }, onError: { error in
-                print(error)
+                }, onError: { error in
+                    print(error)
             })
             .addDisposableTo(disposeBag)
     }
