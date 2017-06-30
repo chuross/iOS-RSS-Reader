@@ -13,6 +13,7 @@ import RxSwift
 class EntriesScreenViewController : UIViewController {
 
     @IBOutlet weak var entryTable: UITableView!
+    var feed: Feed? = nil
     private let dataSource = EntryDataSource()
     private var disposeBag: DisposeBag = DisposeBag()
 
@@ -35,16 +36,18 @@ class EntriesScreenViewController : UIViewController {
 
         let delegate = (UIApplication.shared.delegate) as! AppDelegate
 
-        EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://rocketnews24.com/feed/"))
-            .subscribeOn(ConcurrentMainScheduler.instance)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] entries -> Void in
-                self?.dataSource.entries.append(contentsOf: entries)
-                self?.entryTable.reloadData()
-                }, onError: { error -> Void in
-            })
-            .addDisposableTo(disposeBag)
+        if let feed = feed {
+            EntryRepository(container: delegate.container).findAllByFeedId(feedId: feed.id)
+                .subscribeOn(ConcurrentMainScheduler.instance)
+                .observeOn(MainScheduler.instance)
+                .subscribe(onNext: { [weak self] entries -> Void in
+                    self?.dataSource.entries.append(contentsOf: entries)
+                    self?.entryTable.reloadData()
+                    }, onError: { error -> Void in
+                })
+                .addDisposableTo(disposeBag)
 
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {

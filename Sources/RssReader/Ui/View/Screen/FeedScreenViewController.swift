@@ -36,6 +36,12 @@ class FeedScreenViewController : UIViewController {
 
         let delegate = (UIApplication.shared.delegate) as! AppDelegate
 
+        dataSource.itemClickLitener = { feed -> Void in
+            let viewController = EntriesScreenViewController()
+            viewController.feed = feed
+            delegate.navigationController?.pushViewController(viewController, animated: true)
+        }
+
         FeedRepository(container: delegate.container).findAllByKeyword(query: "F1")
             .subscribeOn(ConcurrentMainScheduler.instance)
             .observeOn(MainScheduler.instance)

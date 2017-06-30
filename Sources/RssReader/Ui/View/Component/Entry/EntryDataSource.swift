@@ -27,9 +27,7 @@ class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let entry = entries[indexPath.row]
-
-        itemClickLitener?(entry)
+        itemClickLitener?(entries[indexPath.row])
 
         tableView.deselectRow(at: indexPath, animated: true)
     }

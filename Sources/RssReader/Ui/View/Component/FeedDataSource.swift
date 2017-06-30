@@ -34,4 +34,9 @@ class FeedDataSource : NSObject, UICollectionViewDelegate, UICollectionViewDeleg
 
         return cell
     }
+
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        itemClickLitener?(feeds[indexPath.row])
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
