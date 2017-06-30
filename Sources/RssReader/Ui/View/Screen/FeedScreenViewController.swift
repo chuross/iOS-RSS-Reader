@@ -50,6 +50,7 @@ class FeedScreenViewController : UIViewController, UISearchBarDelegate {
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
             search(query: text)
+            searchBar.resignFirstResponder()
         }
     }
 
