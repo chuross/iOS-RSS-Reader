@@ -28,7 +28,7 @@ class EntryMeta: ValueObject {
         else {
             return nil
         }
-        let thumbnailUrl = (json["thumbnail"] as? [[String: Any]])?.first?["url"] as? String
+        let thumbnailUrl = (json["visual"] as? [String: Any])?["url"] as? String
         return EntryMeta(
             title: title,
             url: URL(string: url)!,
