@@ -31,6 +31,8 @@ class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         viewController.entry = entry
 
         AppDelegate.application().navigationController?.pushViewController(viewController, animated: true)
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }
