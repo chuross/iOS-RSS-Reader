@@ -22,9 +22,16 @@ class EntriesScreenViewController : UIViewController {
 
         entryTable.estimatedRowHeight = 100
         entryTable.rowHeight = UITableViewAutomaticDimension
-        entryTable.dataSource = self.dataSource
-        entryTable.delegate = self.dataSource
+        entryTable.dataSource = dataSource
+        entryTable.delegate = dataSource
         entryTable.register(UINib(nibName: EntryViewCell.CELL_ID, bundle: nil), forCellReuseIdentifier: EntryViewCell.CELL_ID)
+
+        dataSource.itemClickLitener = { entry in
+            let viewController = EntryDetailScreenViewController()
+            viewController.entry = entry
+            
+            AppDelegate.application().navigationController?.pushViewController(viewController, animated: true)
+        }
 
         let delegate = (UIApplication.shared.delegate) as! AppDelegate
 

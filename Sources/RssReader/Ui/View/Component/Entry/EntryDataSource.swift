@@ -12,6 +12,7 @@ import UIKit
 class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     var entries: [Entry] = []
+    var itemClickLitener: ((_ entry: Entry) -> Void)?
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entries.count
@@ -27,10 +28,8 @@ class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let entry = entries[indexPath.row]
-        let viewController = EntryDetailScreenViewController()
-        viewController.entry = entry
 
-        AppDelegate.application().navigationController?.pushViewController(viewController, animated: true)
+        itemClickLitener?(entry)
 
         tableView.deselectRow(at: indexPath, animated: true)
     }
