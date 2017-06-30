@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FeedId: Identity {
+struct FeedId: Identity {
 
     typealias Value = String
 

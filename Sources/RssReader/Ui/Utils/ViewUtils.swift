@@ -14,11 +14,11 @@ final class ViewUtils {
     private init() {
     }
 
-    static func instantiateNib(nibName: String) -> UINib {
+    public static func instantiateNib(_ nibName: String) -> UINib {
         return UINib(nibName: nibName, bundle: nil)
     }
 
-    static func instantiateView<T>(nibName: String) -> T {
-        return instantiateNib(nibName: nibName).instantiate(withOwner: nil, options: nil)[0] as! T
+    public static func instantiateView<T>(_ nibName: String) -> T {
+        return instantiateNib(nibName).instantiate(withOwner: nil, options: nil)[0] as! T
     }
 }

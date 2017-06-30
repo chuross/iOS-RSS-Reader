@@ -12,7 +12,7 @@ import UIKit
 class EntryDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     var entries: [Entry] = []
-    var itemClickLitener: ((_ entry: Entry) -> Void)?
+    var itemClickLitener: ((Entry) -> Void)?
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entries.count

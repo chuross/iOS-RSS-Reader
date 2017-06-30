@@ -24,7 +24,7 @@ class EntriesScreenViewController : UIViewController {
         entryTable.rowHeight = UITableViewAutomaticDimension
         entryTable.dataSource = dataSource
         entryTable.delegate = dataSource
-        entryTable.register(UINib(nibName: EntryViewCell.CELL_ID, bundle: nil), forCellReuseIdentifier: EntryViewCell.CELL_ID)
+        entryTable.register(ViewUtils.instantiateNib(EntryViewCell.CELL_ID), forCellReuseIdentifier: EntryViewCell.CELL_ID)
 
         dataSource.itemClickLitener = { entry in
             let viewController = EntryDetailScreenViewController()
@@ -36,6 +36,8 @@ class EntriesScreenViewController : UIViewController {
         let delegate = (UIApplication.shared.delegate) as! AppDelegate
 
         EntryRepository(container: delegate.container).findAllByFeedId(feedId: FeedId("feed/http://rocketnews24.com/feed/"))
+            .subscribeOn(ConcurrentMainScheduler.instance)
+            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] entries -> Void in
                 self?.dataSource.entries.append(contentsOf: entries)
                 self?.entryTable.reloadData()
@@ -46,6 +48,7 @@ class EntriesScreenViewController : UIViewController {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         disposeBag = DisposeBag()
     }
 

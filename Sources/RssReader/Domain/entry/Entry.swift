@@ -15,7 +15,6 @@ class Entry: Entity {
     let id: EntryId
     let meta: EntryMeta?
 
-
     init(id: EntryId, meta: EntryMeta?) {
         self.id = id
         self.meta = meta
