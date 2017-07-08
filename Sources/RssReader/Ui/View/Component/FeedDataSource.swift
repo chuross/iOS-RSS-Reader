@@ -19,11 +19,11 @@ class FeedDataSource : NSObject, UICollectionViewDelegate, UICollectionViewDeleg
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(0)
+        return CGFloat(7)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = collectionView.frame.size.width / 2.0
+        let size = (collectionView.frame.size.width / 2.0) - 7
         return CGSize(width: size, height: size)
     }
 
